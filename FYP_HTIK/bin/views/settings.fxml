@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.setting">
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Semester Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="semesterN" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        
+        <Label text="Number of Exam Days:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="numDaysField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label text="Starting Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <DatePicker fx:id="startDatePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        
+        <Label text="Morning Session:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <CheckBox fx:id="morningCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="morningSlotField" promptText="Start Time" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <TextField fx:id="morningSlotField1" promptText="End Time" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+        
+        <Label text="Afternoon Session:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <CheckBox fx:id="afternoonCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <TextField fx:id="afternoonSlotField" promptText="Start Time" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+        <TextField fx:id="afternoonSlotField1" promptText="End Time" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+        
+        <Label text="Night Session:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <CheckBox fx:id="nightCheckBox" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="nightSlotField" promptText="Start Time" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+        <TextField fx:id="nightSlotField1" promptText="End Time" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+    </GridPane>
+
+    <Button fx:id="saveSettingsButton" mnemonicParsing="false" onAction="#handleSaveSettings" text="Save Settings" />
+    <Button fx:id="loadSettingsButton" mnemonicParsing="false" onAction="#loadSettingsFromFile" text="Load Settings" />
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
